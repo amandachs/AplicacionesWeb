@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Elementos de HTML</title>
+    </head>
+<body>
+
+<h2>Content sectioning</h2>
+
+<h1>1. Utilizando la etiqueta &lt;footer&gt;</h1>
+    <p>Se coloca al final de una página.</p>
+        <footer>
+            <p>&copy; 2025 Desarrollo Ágil de Aplicaciones web</p>
+        </footer>
+
+
+<h1>2. Utilizando la etiqueta &lt;nav&gt;</h1>
+    <p>Representa una sección de la página para navegar por medio de enlaces.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tecnologías</a></li>
+                <li><a href="#">Web</a></li>
+            </ul>
+        </nav>
+
+
+<br>
+<br>
+<h2>Text content</h2>
+
+<h1>3. Utilizando la etiqueta &lt;p&gt;</h1>
+    <p>Representa un párrafo</p>
+
+<h1>4. Utilizando la etiqueta &lt;ul&gt; y &lt;li&gt;</h1>
+    <p>ul: Representa una lista desordenada de elementos.</p>
+    <p>ul: Representa un item de la lista.</p> 
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Vue.js</li>
+            <li>Python</li>
+        </ul>
+    
+
+
+
+<br>
+<br>
+<h2>Inline text semantics</h2>
+
+<h1>5. Utilizando la etiqueta &lt;a&gt;</h1>
+    <p>Crea un hyperlink con href.</p> 
+        <p>HTML elements reference: <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs</a></p>
+
+<h1>6. Utilizando la etiqueta &lt;strong&gt;</h1>
+    <p>Palabra en <strong>negrita</strong> 
+
+<h1>7. Utilizando la etiqueta &lt;em&gt;</h1>
+    <p>Palabra en <em>cursiva</em></p>
+
+<h1>8. Utilizando la etiqueta &lt;time&gt;</h1>
+    <p>Fecha de hoy: <time datetime="2025-02-25">25 de febrero de 2025</time></p>
+
+
+
+<br>
+<br> 
+<h2>Image and multimedia</h2>
+
+<h1>9. Utilizando la etiqueta &lt;img&gt;</h1>
+    <p>Incorpora una imagen en la página.</p> 
+        <img src="https://www.w3.org/Icons/w3c_home" alt="Logo de W3C" width="200">
+
+
+<h1>10. Utilizando la etiqueta &lt;map&gt; y &lt;area&gt;</h1>
+    <p>Permite definir una área de la imagen a la cual es posible dar clic y navegar hacia otro sitio.</p>
+    <img src="https://www.w3.org/Icons/w3c_home" usemap="#imagenMapa" alt="Mapa de imagen">
+    <map name="imagenMapa">
+        <area shape="rect" coords="0,0,600,200" href="https://www.w3.org/" alt="Área única" title="Haz clic aquí">
+    </map>
+    
+
+
+
+<br>
+<br>
+<h2>Table content</h2>
+
+<h1>11. Utilizando las etiquetas &lt;table&gt;, &lt;tr&gt;, &lt;td&gt; y &lt;th&gt;</h1>
+    <table border="1">
+        <tr>
+            <th>Tecnología web</th>
+            <th>Dificultad</th>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Media</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Media</td>
+        </tr>
+    </table>
+
+
+
+<br>
+<br>
+<h2>Forms</h2>
+
+<h1>12. Utilizando la etiqueta &lt;button&gt;</h1>
+    <button type="submit">Esto es un botón</button>
+
+<h1>13. Utilizando las etiquetas &lt;form&gt;, &lt;label&gt;, &lt;input&gt; y &lt;button&gt;</h1>
+    <form action="#">
+        <label for="tecnología">Tecnología web:</label>
+        <input type="text" id="tecnología" name="tecnología">
+        <button type="submit">Enviar</button>
+    </form>
+
+
+</body>
+</html>
