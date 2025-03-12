@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display: flex vs. Display: grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Display: Flex vs. Display: Grid</h1>
+
+    <section>
+        <h2>Características de display: flex</h2>
+        <p><strong>1. Modelo de diseño unidimensional:</strong> Flexbox está diseñado para gestionar la distribución de elementos en una sola dimensión: una fila o una columna. Esto lo hace ideal para alinear y distribuir el espacio entre los elementos dentro de un contenedor.</p>
+
+        <p><strong>2. Ejes:</strong> Los elementos flexibles se organizan a lo largo de un eje principal y un eje cruzado (transversal), lo que permite un control preciso sobre la alineación y el espacio entre los elementos.</p>
+        
+        <table border="1">
+            <tr><th>Eje principal</th><td>Definido por <code>flex-direction</code>.</td></tr>
+            <tr><th>row y row-reverse</th><td>Se disponen a lo largo de la fila según la dirección de la línea.</td></tr>
+            <tr><th>column y column-reverse</th><td>Se disponen desde el borde superior de la página hasta el final, según la dirección del bloque.</td></tr>
+            <tr><th>Eje cruzado</th><td>Perpendicular al eje principal.</td></tr>
+        </table>
+
+        <p><strong>3. Dirección de escritura:</strong> Flexbox no asume una dirección de escritura específica. En lugar de utilizar términos como "izquierda" o "derecha", se emplean márgenes inicial y final según el idioma y la dirección de escritura del documento.</p>
+
+        <p><strong>4. Contenedor flex:</strong> Para crear un contenedor flex, se aplica <code>display: flex</code> o <code>inline-flex</code>. Los elementos hijos del contenedor se convierten en ítems flex, adoptando el comportamiento de Flexbox automáticamente.</p>
+
+        <p>Algunas propiedades predeterminadas del contenedor:</p>
+        <ul>
+            <li>Los ítems se disponen en una fila (<code>flex-direction: row</code>).</li>
+            <li>Los ítems empiezan desde el margen inicial del eje principal.</li>
+            <li>No se ajustan en el eje principal, pero pueden encogerse (<code>flex-shrink</code>).</li>
+            <li>Los ítems se estiran para igualar la altura del ítem más alto (<code>align-items: stretch</code>).</li>
+            <li><code>flex-basis</code> se establece en auto, lo que significa que el tamaño inicial de los ítems se calcula en función de su contenido.</li>
+            <li>Los ítems no se envuelven en varias líneas por defecto, pero pueden modificarse con <code>flex-wrap: wrap</code>.</li>
+        </ul>
+
+        <p><strong>5. Contenedores flex multi-línea con flex-wrap:</strong> Aunque Flexbox es un modelo unidimensional, se puede permitir que los ítems se distribuyan en varias líneas con la propiedad <code>flex-wrap</code>.</p>
+        
+        <table border="1">
+            <tr><th>flex-wrap: nowrap</th><td>Los ítems intentan ajustarse en una sola línea. Si no caben, se pueden encoger o sobresalir del contenedor.</td></tr>
+            <tr><th>flex-wrap: wrap</th><td>Los ítems se distribuyen en múltiples líneas en lugar de sobresalir o comprimirse demasiado.</td></tr>
+        </table>
+
+        <p><strong>6. Propiedades de los ítems flex:</strong></p>
+        <ul>
+            <li><code>flex-basis</code>: Define el tamaño inicial de un ítem antes de aplicar el crecimiento o la contracción. El valor predeterminado es auto.</li>
+            <li><code>flex-grow</code>: Controla cuánto puede crecer un ítem para ocupar el espacio disponible en el eje principal.</li>
+            <li><code>flex-shrink</code>: Controla cómo los ítems se contraen cuando no hay suficiente espacio en el contenedor. Si no se especifican valores para <code>flex-grow</code> o <code>flex-shrink</code>, los ítems mantienen su tamaño y el espacio restante queda vacío.</li>
+        </ul>
+
+        <p><strong>7. Alineación y distribución del espacio:</strong></p>
+        <ul>
+            <li><code>align-items:</code> Alinea los ítems a lo largo del eje cruzado.</li>
+            <table border="1">
+                <tr><th>stretch</th><td>Los ítems se expanden para llenar el contenedor (predeterminado).</td></tr>
+                <tr><th>flex-start</th><td>Alineación al inicio del eje cruzado.</td></tr>
+                <tr><th>flex-end</th><td>Alineación al final del eje cruzado.</td></tr>
+                <tr><th>center</th><td>Alineación centrada en el eje cruzado.</td></tr>
+            </table>
+            
+            <li><code>justify-content:</code> Alinea los ítems en el eje principal y distribuye el espacio sobrante.</li>
+            <table border="1">
+                <tr><th>flex-start</th><td>Los ítems se alinean al inicio del eje principal (predeterminado).</td></tr>
+                <tr><th>flex-end</th><td>Los ítems se alinean al final del eje principal.</td></tr>
+                <tr><th>center</th><td>Los ítems se alinean en el centro del eje principal.</td></tr>
+                <tr><th>space-between</th><td>Distribuye los ítems con espacios iguales entre ellos.</td></tr>
+                <tr><th>space-around</th><td>Agrega espacio igual alrededor de cada ítem.</td></tr>
+                <tr><th>space-evenly</th><td>Distribuye los ítems con espacios completamente iguales entre ellos.</td></tr>
+            </table>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Características de display: grid</h2>
+
+        <p><strong>1. Modelo de diseño bidimensional:</strong> CSS Grid permite gestionar la disposición de los elementos en dos dimensiones: filas y columnas. Esto permite crear diseños de página más complejos y estructurados..</p>
+    
+        <p><strong>2. Cuadrícula:</strong> Una cuadrícula está formada por líneas horizontales y verticales que se intersecan, permitiendo organizar los elementos en filas y columnas dentro de un contenedor.</p>
+    
+        <p><strong>3. Tamaños fijos y flexibles:</strong> Grid Layout permite definir el tamaño de las filas y columnas de manera flexible o fija.</p>
+        <ul>
+            <li><strong>Tamaños fijos:</strong> Se pueden usar unidades absolutas como píxeles (px) para definir el tamaño fijo de filas o columnas.</li>
+            <li><strong>Tamaños flexibles:</strong> También se pueden utilizar unidades relativas como porcentaje (%) o fr (fracción) para distribuir el espacio disponible.</li>
+        </ul>
+    
+        <p><strong>4. Posicionamiento de elementos:</strong> Los elementos pueden posicionarse con precisión dentro de la cuadrícula usando diferentes métodos:</p>
+        <ul>
+            <li><strong>Uso de números de línea:</strong> Los elementos se colocan entre las líneas de la cuadrícula, por ejemplo, de la línea 1 a la línea 3.</li>
+            <li><strong>Áreas:</strong> Los elementos pueden ubicarse en áreas específicas definidas por nombre usando <code>grid-template-areas</code>.</li>
+            <li><strong>Nombre de las líneas:</strong> Pueden usarse nombres personalizados de las líneas para especificar las posiciones.</li>
+        </ul>
+        
+        <p><strong>5. Control de alineación:</strong> Grid Layout permite un control preciso de la alineación de los elementos dentro de sus celdas y del contenedor. Se utilizan las propiedades:</p>
+        <ul>
+            <li><code>justify-items:</code> Alinea los elementos a lo largo del eje horizontal.</li>
+            <li><code>align-items:</code> Alinea los elementos a lo largo del eje vertical.</li>
+        </ul>
+    
+        <p><strong>6. Espacio entre elementos:</strong> Grid Layout proporciona propiedades para controlar el espacio entre las filas y columnas de la cuadrícula:</p>
+        <ul>
+            <li><code>grid-gap:</code> Define el espacio entre todas las filas y columnas.</li>
+            <li><code>grid-row-gap:</code> Define el espacio entre las filas.</li>
+            <li><code>grid-column-gap:</code> Define el espacio entre las columnas.</li>
+        </ul>
+    
+        <p><strong>7. Subcuadrículas:</strong> Se pueden anidar cuadrículas dentro de celdas de otras cuadrículas, creando diseños aún más complejos y flexibles.</p>
+    
+        <p><strong>8. Repetición de elementos:</strong> La función <code>repeat()</code> permite crear filas o columnas de manera más eficiente, sin necesidad de especificar manualmente el mismo tamaño varias veces.</p>
+
+    </section>
+
+    <section>
+        <h2>Diferencias entre Flex y Grid</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Flex</th>
+                    <th>Grid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dimensión</td>
+                    <td>Unidimensional (maneja filas o columnas, no ambos a la vez).</td>
+                    <td>Bidimensional (maneja tanto filas como columnas simultáneamente).</td>
+                </tr>
+                <tr>
+                    <td>Flujo de contenido</td>
+                    <td>Basado en el contenido; los elementos se ajustan según el espacio disponible.</td>
+                    <td>Basado en una cuadrícula fija; los elementos se colocan en una estructura definida de filas y columnas.</td>
+                </tr>
+                <tr>
+                    <td>Alineación</td>
+                    <td>Controla la alineación en una sola dimensión (fila o columna) con propiedades como justify-content y align-items.</td>
+                    <td>Controla la alineación en ambas dimensiones, permitiendo alineación tanto en filas como en columnas, y también superposición de elementos.</td>
+                </tr>
+                <tr>
+                    <td>Complejidad de diseño</td>
+                    <td>Ideal para diseños simples y de una sola dimensión (por ejemplo, menús o barras).</td>
+                    <td>Ideal para diseños complejos con varias secciones, donde se necesita controlar tanto filas como columnas.</td>
+                </tr>
+                <tr>
+                    <td>Posicionamiento</td>
+                    <td>Los elementos se distribuyen dentro del espacio disponible, ajustándose al tamaño del contenedor.</td>
+                    <td>Los elementos se colocan en una cuadrícula definida, pudiendo ocupar múltiples filas y columnas.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Casos en los que es más conveniente utilizar uno u otro</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Caso de uso</th>
+                    <th>Flex</th>
+                    <th>Grid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diseños lineales o de una sola dimensión</td>
+                    <td>Ideal para diseños en una sola fila o columna (por ejemplo, menús horizontales, barras laterales).</td>
+                    <td>No es necesario; Flexbox es más eficiente para este tipo de diseño.</td>
+                </tr>
+                <tr>
+                    <td>Distribución de elementos en una cuadrícula compleja</td>
+                    <td>No es adecuado para diseños que requieren control sobre filas y columnas al mismo tiempo.</td>
+                    <td>Perfecto para diseños de páginas complejas con múltiples filas y columnas (por ejemplo, diseños de rejilla para galerías, páginas web de múltiples secciones).</td>
+                </tr>
+                <tr>
+                    <td>Control de alineación en una sola dimensión</td>
+                    <td>Mejor para alinear elementos en una sola fila o columna (por ejemplo, en formularios o botones alineados horizontalmente).</td>
+                    <td>No es necesario, ya que Grid tiene un control más avanzado de alineación en ambas dimensiones.</td>
+                </tr>
+                <tr>
+                    <td>Cuando los elementos deben ocupar espacio dinámico</td>
+                    <td>Ideal cuando los elementos deben ajustarse al tamaño disponible del contenedor, como en barras de navegación o cajas de contenido de tamaño variable.</td>
+                    <td>Menos eficiente, ya que Grid define un espacio fijo para cada celda.</td>
+                </tr>
+                <tr>
+                    <td>Distribución flexible de elementos dentro de un contenedor</td>
+                    <td>Perfecto cuando los elementos deben cambiar su tamaño o distribución dependiendo del espacio disponible en el contenedor.</td>
+                    <td>Aunque se puede usar, Grid no ofrece tanta flexibilidad para elementos con tamaño dinámico.</td>
+                </tr>
+                <tr>
+                    <td>Diseños con superposición de elementos</td>
+                    <td>No es ideal, ya que Flexbox no permite la superposición de elementos.</td>
+                    <td>Permite la superposición de elementos utilizando áreas de cuadrícula o posicionamiento dentro de celdas, ideal para diseños más complejos.</td>
+                </tr>
+                <tr>
+                    <td>Uso combinado</td>
+                    <td>No se puede usar Grid dentro de un Flexbox.</td>
+                    <td>En algunos contextos, se puede utilizar Flexbox dentro de las celdas de un diseño Grid para obtener un control adicional sobre el contenido dentro de las celdas.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Ejemplos de uso</h2>
+
+        <h3>Ejemplo de Flex</h3>
+        <pre>
+
+        <strong>ejemploflex.html</strong> 
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Flexbox Básico&lt;/title&gt;
+            &lt;link rel="stylesheet" href="estilos.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+            &lt;div class="contenedor-flex"&gt;
+                &lt;div class="elemento-flex"&gt;Elemento 1&lt;/div&gt;
+                &lt;div class="elemento-flex"&gt;Elemento 2&lt;/div&gt;
+                &lt;div class="elemento-flex"&gt;Elemento 3&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+        <strong>estilos.css</strong>
+        
+            .contenedor-flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #fff;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+        
+            .elemento-flex {
+                background-color: #fd9dc9;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                padding: 20px;
+                border-radius: 4px;
+            }
+        </pre>
+
+        <div class="contenedor-flex">
+            <div class="elemento-flex">Elemento 1</div>
+            <div class="elemento-flex">Elemento 2</div>
+            <div class="elemento-flex">Elemento 3</div>
+        </div>
+
+        <h3>Ejemplo de Grid</h3>
+        <pre>
+        
+        <strong>ejemplogrid.html</strong>  
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+        &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Grid Básico&lt;/title&gt;
+        &lt;link rel="stylesheet" href="estilos.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;div class="contenedor-grid"&gt;
+            &lt;div class="elemento-grid"&gt;Elemento 1&lt;/div&gt;
+            &lt;div class="elemento-grid"&gt;Elemento 2&lt;/div&gt;
+            &lt;div class="elemento-grid"&gt;Elemento 3&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+        <strong>estilos.css</strong>  
+
+        .contenedor-grid { 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            justify-items: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+        }
+        
+        .elemento-grid {
+            background-color: #fd9dc9;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        </pre>
+
+        <div class="contenedor-grid">
+            <div class="elemento-grid">Elemento 1</div>
+            <div class="elemento-grid">Elemento 2</div>
+            <div class="elemento-grid">Elemento 3</div>
+        </div>
+
+    </section>
+
+    <footer>
+        <h2>Referencias bibliográficas</h2>
+        <ul>
+        <li>
+            MDN Web Docs. (s.f). Basic concepts of grid layout. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout</a>
+        </li>
+        <li>
+            MDN Web Docs. (s.f). Basic concepts of flexbox. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox</a>
+        </li>
+        </ul>
+    </footer>
+
+</body>
+</html>
