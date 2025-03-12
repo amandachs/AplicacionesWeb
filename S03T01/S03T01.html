@@ -19,10 +19,22 @@
         <p><strong>2. Ejes:</strong> Los elementos flexibles se organizan a lo largo de un eje principal y un eje cruzado (transversal), lo que permite un control preciso sobre la alineación y el espacio entre los elementos.</p>
         
         <table border="1">
-            <tr><th>Eje principal</th><td>Definido por <code>flex-direction</code>.</td></tr>
-            <tr><th>row y row-reverse</th><td>Se disponen a lo largo de la fila según la dirección de la línea.</td></tr>
-            <tr><th>column y column-reverse</th><td>Se disponen desde el borde superior de la página hasta el final, según la dirección del bloque.</td></tr>
-            <tr><th>Eje cruzado</th><td>Perpendicular al eje principal.</td></tr>
+            <tr>
+                <th>Eje principal</th>
+                <td>Definido por <code>flex-direction</code>.</td>
+            </tr>
+            <tr>
+                <th>row y row-reverse</th>
+                <td>Se disponen a lo largo de la fila según la dirección de la línea.</td>
+            </tr>
+            <tr>
+                <th>column y column-reverse</th>
+                <td>Se disponen desde el borde superior de la página hasta el final, según la dirección del bloque.</td>
+            </tr>
+            <tr>
+                <th>Eje cruzado</th>
+                <td>Perpendicular al eje principal.</td>
+            </tr>
         </table>
 
         <p><strong>3. Dirección de escritura:</strong> Flexbox no asume una dirección de escritura específica. En lugar de utilizar términos como "izquierda" o "derecha", se emplean márgenes inicial y final según el idioma y la dirección de escritura del documento.</p>
@@ -42,8 +54,14 @@
         <p><strong>5. Contenedores flex multi-línea con flex-wrap:</strong> Aunque Flexbox es un modelo unidimensional, se puede permitir que los ítems se distribuyan en varias líneas con la propiedad <code>flex-wrap</code>.</p>
         
         <table border="1">
-            <tr><th>flex-wrap: nowrap</th><td>Los ítems intentan ajustarse en una sola línea. Si no caben, se pueden encoger o sobresalir del contenedor.</td></tr>
-            <tr><th>flex-wrap: wrap</th><td>Los ítems se distribuyen en múltiples líneas en lugar de sobresalir o comprimirse demasiado.</td></tr>
+            <tr>
+                <th>flex-wrap: nowrap</th>
+                <td>Los ítems intentan ajustarse en una sola línea. Si no caben, se pueden encoger o sobresalir del contenedor.</td>
+            </tr>
+            <tr>
+                <th>flex-wrap: wrap</th>
+                <td>Los ítems se distribuyen en múltiples líneas en lugar de sobresalir o comprimirse demasiado.</td>
+            </tr>
         </table>
 
         <p><strong>6. Propiedades de los ítems flex:</strong></p>
@@ -65,12 +83,29 @@
             
             <li><code>justify-content:</code> Alinea los ítems en el eje principal y distribuye el espacio sobrante.</li>
             <table border="1">
-                <tr><th>flex-start</th><td>Los ítems se alinean al inicio del eje principal (predeterminado).</td></tr>
-                <tr><th>flex-end</th><td>Los ítems se alinean al final del eje principal.</td></tr>
-                <tr><th>center</th><td>Los ítems se alinean en el centro del eje principal.</td></tr>
-                <tr><th>space-between</th><td>Distribuye los ítems con espacios iguales entre ellos.</td></tr>
-                <tr><th>space-around</th><td>Agrega espacio igual alrededor de cada ítem.</td></tr>
-                <tr><th>space-evenly</th><td>Distribuye los ítems con espacios completamente iguales entre ellos.</td></tr>
+                <tr>
+                    <th>flex-start</th>
+                    <td>Los ítems se alinean al inicio del eje principal (predeterminado).</td>
+                </tr>
+                <tr>
+                    <th>flex-end</th>
+                    <td>Los ítems se alinean al final del eje principal.</td>
+                </tr>
+                <tr>
+                    <th>center</th>
+                    <td>Los ítems se alinean en el centro del eje principal.</td>
+                </tr>
+                <tr>
+                    <th>space-between</th>
+                    <td>Distribuye los ítems con espacios iguales entre ellos.</td>
+                </tr>
+                <tr>
+                    <th>space-around</th>
+                    <td>Agrega espacio igual alrededor de cada ítem.</td>
+                </tr>
+                <tr>
+                    <th>space-evenly</th><td>Distribuye los ítems con espacios completamente iguales entre ellos.</td>
+                </tr>
             </table>
         </ul>
     </section>
@@ -208,8 +243,8 @@
         <h2>Ejemplos de uso</h2>
 
         <h3>Ejemplo de Flex</h3>
+        
         <pre>
-
         <strong>ejemploflex.html</strong> 
 
         &lt;!DOCTYPE html&gt;
@@ -233,22 +268,22 @@
 
         <strong>estilos.css</strong>
         
-            .contenedor-flex {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: #fff;
-                padding: 20px;
-                margin-bottom: 20px;
-            }
+        .contenedor-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
         
-            .elemento-flex {
-                background-color: #fd9dc9;
-                color: rgb(0, 0, 0);
-                text-align: center;
-                padding: 20px;
-                border-radius: 4px;
-            }
+        .elemento-flex {
+            background-color: #fd9dc9;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            border-radius: 4px;
+        }
         </pre>
 
         <div class="contenedor-flex">
@@ -310,15 +345,205 @@
 
     </section>
 
+    <section>
+        <h2>Ventajas y Desventajas de las Nomenclaturas CSS</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nomenclatura</th>
+                    <th>Definición</th>
+                    <th>Ventajas</th>
+                    <th>Desventajas</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BEM (Block Element Modifier)</td>
+                    <td>Una metodología de nombrado de clases CSS que divide las clases en bloques, elementos y modificadores.</td>
+                    <td>
+                        <ul>
+                            <li>Facilita la escalabilidad y mantenimiento del código.</li>
+                            <li>Evita conflictos de nombres en CSS.</li>
+                            <li>Mejora la organización y claridad en proyectos grandes.</li>
+                            <li>Promueve la reutilización de clases y facilita la comprensión por parte de otros desarrolladores.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Puede generar nombres de clases largas y difíciles de manejar.</li>
+                            <li>Requiere disciplina y planificación rigurosa para evitar la duplicación de clases.</li>
+                            <li>Puede volverse tedioso en proyectos pequeños.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.button {}</code> <br>
+                        <code>.button__icon {}</code> <br>
+                        <code>.button--large {}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSS Semántico</td>
+                    <td>Uso de nombres de clases que describen el propósito del contenido más que su estilo visual.</td>
+                    <td>
+                        <ul>
+                            <li>Mejora la accesibilidad y el SEO (Search Engine Optimization) al utilizar etiquetas HTML significativas.</li>
+                            <li>Facilita la comprensión del código por parte de otros desarrolladores.</li>
+                            <li>Ayuda en la creación de una estructura lógica y organizada.</li>
+                            <li>Aumenta la compatibilidad con lectores de pantalla.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Puede generar mayor complejidad si no se organiza bien.</li>
+                            <li>Necesita una mayor planificación al comenzar el proyecto.</li>
+                            <li>La sobrecarga de elementos semánticos puede resultar innecesaria.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.header {}</code><br>
+                        <code>.article {}</code><br>
+                        <code>.footer {}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSS atómico</td>
+                    <td>Crear clases pequeñas que representan una propiedad o conjunto de propiedades CSS y luego combinarlas.</td>
+                    <td>
+                        <ul>
+                            <li>Proporciona clases pequeñas y reutilizables.</li>
+                            <li>Permite una mayor flexibilidad al combinar clases.</li>
+                            <li>Facilita la creación de diseños rápidos sin necesidad de escribir mucho CSS.</li>
+                            <li>Permite optimizar el rendimiento al cargar solo las clases necesarias.</li>
+                            <li>Facilita la personalización de componentes.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Aumenta la complejidad en el marcado HTML debido a la gran cantidad de clases.</li>
+                            <li>Puede generar un código de CSS más difícil de leer.</li>
+                            <li>Necesita una estructura bien definida para evitar confusión.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.bg-blue {}</code><br>
+                        <code>.p-10 {}</code><br>
+                        <code>.m-5 {}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Utility-first CSS</td>
+                    <td>Uso de clases predefinidas para aplicar estilos rápidos y concisos directamente en el HTML. Derivada de CSS atómico.</td>
+                    <td>
+                        <ul>
+                            <li>Fomenta la reutilización de clases de utilidad.</li>
+                            <li>Evita la creación de CSS personalizado innecesario.</li>
+                            <li>Permite un desarrollo rápido y eficiente.</li>
+                            <li>Facilita el mantenimiento y la modificación del diseño sin tocar los estilos globales.</li>
+                            <li>La personalización de la apariencia es sencilla mediante la combinación de clases.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Puede resultar en HTML menos limpio y más difícil de leer.</li>
+                            <li>Requiere el uso de muchas clases, lo que puede hacer que el código sea más difícil de mantener.</li>
+                            <li>La falta de organización puede generar redundancia en el CSS.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>&lt;div class="bg-blue p-5 m-5 text-white"&gt;Content&lt;/div&gt;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SMACSS (Scalable Modular Architecture for CSS)</td>
+                    <td>Metodología que organiza el CSS en categorías modulares, como base, layout, módulos, estado y tema.</td>
+                    <td>
+                        <ul>
+                            <li>Mejora la organización del código al dividirlo en categorías.</li>
+                            <li>Facilita la mantenibilidad en proyectos grandes.</li>
+                            <li>Permite un enfoque flexible, adaptándose a proyectos de cualquier tamaño.</li>
+                            <li>Evita la duplicación de código, promoviendo la reutilización.</li>
+                            <li>Proporciona un enfoque más modular para la organización del CSS.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Requiere un entendimiento profundo de la arquitectura para evitar caos.</li>
+                            <li>Puede volverse difícil de mantener si no se aplica correctamente.</li>
+                            <li>La estructura modular puede resultar más compleja de organizar en proyectos pequeños.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.btn {}</code><br>
+                        <code>.btn-primary {}</code><br>
+                        <code>.layout-header {}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OOCSS (Object-Oriented CSS)</td>
+                    <td>Enfoque que trata a los elementos como "objetos", separando la estructura y el diseño.</td>
+                    <td>
+                        <ul>
+                            <li>Favorece la reutilización y modularidad de los estilos.</li>
+                            <li>Facilita la creación de componentes flexibles.</li>
+                            <li>Permite la implementación de estilos consistentes en toda la aplicación.</li>
+                            <li>Aumenta la coherencia de los componentes al desacoplar el estilo de la estructura.</li>
+                            <li>Favorece la creación de interfaces de usuario más limpias y fáciles de modificar.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Requiere un buen conocimiento de la arquitectura de objetos.</li>
+                            <li>Puede generar clases adicionales que sobrecargan el HTML.</li>
+                            <li>Puede resultar más complejo de implementar al principio en proyectos grandes.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.media-object {}</code><br>
+                        <code>.media-object img {}</code><br>
+                        <code>.media-object-text {}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SUIT CSS</td>
+                    <td>Metodología basada en la creación de componentes reutilizables con nombres de clases explícitos.</td>
+                    <td>
+                        <ul>
+                            <li>Fomenta la creación de componentes modulares y reutilizables.</li>
+                            <li>Mantiene un estilo consistente en aplicaciones grandes.</li>
+                            <li>Permite una mayor facilidad de mantenimiento a largo plazo.</li>
+                            <li>Ayuda en la creación de una arquitectura escalable.</li>
+                            <li>Favorece la creación de componentes sin afectar el estilo global.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Requiere un entendimiento preciso de la nomenclatura.</li>
+                            <li>Puede volverse difícil de aplicar si no se organiza correctamente.</li>
+                            <li>La implementación de la arquitectura modular puede ser compleja en proyectos grandes.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.Button {}</code><br>
+                        <code>.Button--primary {}</code><br>
+                        <code>.Button__icon {}</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
     <footer>
         <h2>Referencias bibliográficas</h2>
         <ul>
-        <li>
-            MDN Web Docs. (s.f). Basic concepts of grid layout. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout</a>
-        </li>
-        <li>
-            MDN Web Docs. (s.f). Basic concepts of flexbox. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox</a>
-        </li>
+            <li>MDN Web Docs. (s.f). <i>Basic concepts of grid layout.</i> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout</a></li>
+            <li>MDN Web Docs. (s.f). <i>Basic concepts of flexbox.</i> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox</a></li>
+            <li>ManzDev. (s.f.). <i>Metodologías CSS.</i> <a href="https://lenguajecss.com/css/calidad-de-codigo/metodologias-css/" target="_blank">https://lenguajecss.com/css/calidad-de-codigo/metodologias-css/</a></li>
+            <li>Agu, H. (2024). <i>Understanding CSS naming conventions: BEM, OOCSS, SUIT CSS, and SMACSS.</i> <a href="https://www.frontendmentor.io/articles/understanding-css-naming-conventions-bem-oocss-smacss-and-suit-css-V6ZZUYs1xz" target="_blank">https://www.frontendmentor.io/articles/understanding-css-naming-conventions-bem-oocss-smacss-and-suit-css-V6ZZUYs1xz</a></li>
+            <li>Rodríguez, J. A. (2022). <i>BEM: La mejor forma de organizar tus clases en CSS.</i> <a href="https://baetica.com/bem-organizar-tclases-css/" target="_blank">https://baetica.com/bem-organizar-tclases-css/</a></li>
+            <li>Arsenault, C. (2019). <i>OOCSS - The Future of Writing CSS.</i> <a href="https://www.keycdn.com/blog/oocss" target="_blank">https://www.keycdn.com/blog/oocss</a></li>
         </ul>
     </footer>
 
