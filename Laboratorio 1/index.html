@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 1</title>
+
+    <!-- Estilos de Reveal.js para presentación interactiva -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/beige.min.css">
+
+    <!-- Materialize CSS para estilos de interfaz moderna -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Archivo de estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Contenedor principal para la presentación con Reveal.js -->
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Diapositiva de Título -->
+            <section>
+                <img src="https://static-00.iconduck.com/assets.00/materialize-icon-512x262-ssd85h8z.png"
+                    alt="Logo de Materialize">
+                <h1 class="section__title">Materialize</h1>
+                <p class="section__subtitle">Sebastián Navarro - Amanda Chaves</p>
+            </section>
+
+
+            <!-- Diapositiva de Agenda -->
+            <section>
+                <h2 class="section__title">Agenda</h2>
+                <ul class="section__list">
+                    <li class="section__list-item">Información básica de Materialize</li>
+                    <li class="section__list-item">Casos de uso</li>
+                    <li class="section__list-item">Pasos de instalación</li>
+                    <li class="section__list-item">Componentes principales</li>
+                    <li class="section__list-item">Ventajas y desventajas</li>
+                </ul>
+            </section>
+
+
+            <!-- Diapositiva de Información básica de Materialize -->
+            <section>
+                <h2 class="section__title">Información básica de Materialize</h2>
+
+                <!-- Subsección: Origen de Materialize -->
+                <section class="info">
+                    <h3 class="info__title">Origen</h3>
+                    <p class="info__text">Es un framework basado en Material Design desarrollado por Google y
+                        lanzado en 2014.</p>
+                    <img class="info__image" src="images/chang.jpeg" alt="Ejemplo de Material Design">
+                    <p class="info__text"><strong>Equipo de trabajo</strong></p>
+                    <p class="info__text">Alvin Wang, Alan Chang, Alex Mark y Kevin Louie.</p>
+                    <p class="info__text">Universidad Carnegie Mellon</p>
+                </section>
+
+                <!-- Subsección: Fecha de Publicación -->
+                <section class="info">
+                    <h3 class="info__title">Fecha de Publicación</h3>
+                    <p class="info__text">Materialize fue lanzado en 2014 y su última versión estable es la 1.0.0
+                        (2018).</p>
+                    <img class="info__image" src="images/release-date.png" alt="Fecha de lanzamiento">
+                </section>
+
+                <!-- Subsección: Enlace a GitHub -->
+                <section class="info">
+                    <h3 class="info__title">Enlace a GitHub</h3>
+                    <a href="https://github.com/Dogfalo/materialize">
+                        <img class="info__image" src="https://pngimg.com/d/github_PNG65.png" alt="GitHub">
+                    </a>
+                </section>
+
+                <!-- Subsección: Estrellas -->
+                <section class="info">
+                    <h3 class="info__title">Estrellas en GitHub</h3>
+                    <p class="text-center">¡Materialize cuenta con casi 39000⭐!</p>
+                    <img class="info__image" src="images/estrellasMaterialize.png" alt="Estrellas de Materialize">
+                </section>
+
+                <!-- Subsección: Dato Curioso -->
+                <section class="info">
+                    <h3 class="info__title">Dato Curioso</h3>
+                    <p class="info__text">Materialize fue una de las primeras bibliotecas en implementar un sistema de
+                        grid responsivo basado en flexbox.</p>
+                    <img class="info__image" src="images/flexbox.jpg" alt="Flexbox">
+                </section>
+            </section>
+
+
+            <!-- Sección: Casos de Uso -->
+            <section>
+                <h2 class="section__title">Casos de Uso de Materialize</h2>
+
+                <section>
+                    <h3 class="info__title">1. Portales Educativos</h3>
+                    <p class="text-justify">Materialize es utilizado en plataformas educativas gracias a su diseño
+                        responsivo y adaptable.</p>
+                </section>
+
+                <section>
+                    <h3 class="info__title">2. Startups y Landing Pages</h3>
+                    <p class="text-justify">Las startups lo usan para desarrollar sitios web modernos con efectos
+                        visuales atractivos y
+                        tiempos de carga optimizados.</p>
+                </section>
+
+                <section>
+                    <h3 class="info__title">3. Paneles de Administración</h3>
+                    <p class="text-justify">Ideal para dashboards con gráficos, tablas interactivas y menús laterales
+                        plegables.</p>
+                </section>
+
+                <section>
+                    <h3 class="info__title">4. E-commerce</h3>
+                    <p class="text-justify">Materialize permite organizar productos en tiendas online de forma atractiva
+                        y optimizada.</p>
+                </section>
+
+                <section>
+                    <h3 class="info__title">Imágenes de ejemplo</h3>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="images/ejemplo A.png" alt="Ejemplo A">
+                                <div class="caption left-align">
+                                    <p>Landpage</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/ejemplo B.png" alt="Ejemplo B">
+                                <div class="caption left-align">
+                                    <p>Paneles de Administración</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/Ejemplo C.jpg" alt="Ejemplo C">
+                                <div class="caption left-align">
+                                    <p>Panel educativo</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/Ejemplo D.png" alt="Ejemplo D">
+                                <div class="caption left-align">
+                                    <p>Plataforma de e-commerce</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="info__title">Enlaces a páginas</h3>
+                    <ol>
+                        <li><a href="https://www.geeksforgeeks.org/" target="_blank">Geeks for Geeks</a></li>
+                        <li><a href="https://www.rsjoomla.com/" target="_blank">RS Joomla</a></li>
+                        <li><a href="https://kodekloud.com/" target="_blank">Kode Kloud</a></li>
+                        <li><a href="https://careerdesignstudio.buffalo.edu/" target="_blank">Career Design Studio</a></li>
+                        <li><a href="https://nazariancareers.csun.edu/" target="_blank">Nazarian Career Center</a></li>
+                    </ol>
+                </section>
+
+            </section>
+
+
+            <!-- Pasos de Instalación -->
+            <section>
+                <h2 class="section__title">Pasos para la instalación</h2>
+
+                <section class="info">
+                    <h3 class="info__title">Paso 1: Crear el proyecto</h3>
+                    <p class="text-justify">1. Crear una carpeta para el proyecto.</p>
+                    <img class="info__image" src="images/proyecto.png" alt="Proyecto">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">2. Abrir la carpeta del proyecto en un editor de texto (por ejemplo: Visual Studio Code) para crear un archivo .html.</p>
+                    <img class="info__image" src="images/crear archivo.png" alt="Crear archivo" style="width: 50%; max-width: 410px;">
+                    <img class="info__image" src="images/html.png" alt="Html" style="width: 50%; max-width: 440px;">
+                </section>
+
+                <section class="info">
+                    <h3 class="info__title">Paso 2: Acceder a Materialize</h3>
+                    <p class="text-justify">1. Ingresar a <a href="https://materializecss.com/" target="_blank">MaterializeCSS</a>.</p>
+                    <img class="info__image" src="images/ingresar.png" alt="Proyecto" style="width: 80%; max-width: 600px;">
+                </section>
+                
+                <section class="info">
+                    <p class="text-justify">2. Hacer clic en el botón "Get Started".</p>
+                    <img class="info__image" src="images/get started.png" alt="Crear archivo">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">Existen dos formas de integrar Materialize en el proyecto: <strong>CDN o Descarga local</strong>.</p>
+                </section>
+                
+
+                <!-- Opción CDN -->
+                <section class="info">
+                    <h3 class="info__title">Opción 1: Integración con CDN</h3>
+                    <p class="text-justify">1. Copiar el código CDN desde la página de Materialize.</p>
+                    <img class="info__image" src="images/CDN.png" alt="CDN" style="width: 70%; max-width: 600px;">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">2. Pegar el código dentro de la etiqueta head del archivo .html.</p>
+                    <img class="info__image" src="images/head CDM.png" alt="Head CDM" style="width: 70%; max-width: 700px;">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">3. ¡Listo! Materialize está disponible en el proyecto.</p>
+                    <img class="info__image" src="images/éxito CDM.png" alt="Éxito CDM" style="width: 70%; max-width: 600px;">
+                </section>
+
+
+                <!-- Opción Descarga -->
+                <section class="info">
+                    <h3 class="info__title">Opción 2: Descarga local</h3>
+                    <p class="text-justify">1. En la página de Materialize, hacer clic en el botón "Materialize" para descargar el archivo.</p>
+                    <img class="info__image" src="images/descargar.png" alt="Descargar" style="width: 60%; max-width: 500px;">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">2. Verificar que se ha descargado un archivo .zip correctamente.</p>
+                    <img class="info__image" src="images/éxito.png" alt="Éxito">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">3. Ubicar el archivo en la carpeta de descargas.</p>
+                    <img class="info__image" src="images/archivo comprimido.png" alt="Archivo comprimido">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">3. Extraer su contenido haciendo clic derecho → "Extraer todo".</p>
+                    <img class="info__image" src="images/extraer.png" alt="Extraer" style="width: 45%; max-width: 450px;">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">5. Dentro de la carpeta extraída, copiar las carpetas "css" y "js".</p>
+                    <img class="info__image" src="images/copiar carpetas.png" alt="Copiar carpetas">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">6. Pegar estas carpetas dentro de la carpeta del proyecto.</p>
+                    <img class="info__image" src="images/carpetas.png" alt="Carpetas">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">7. Volver a la página de Materialize y copiar el código de HTML Setup.</p>
+                    <img class="info__image" src="images/HTML Setup.png" alt="HTML Setup" style="width: 60%; max-width: 450px;">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">8. Pegar este código dentro del archivo .html del proyecto.</p>
+                    <img class="info__image" src="images/código html.png" alt="Código html" style="width: 70%; max-width: 700px;">
+                </section>
+
+                <section class="info">
+                    <p class="text-justify">9. ¡Listo! Materialize está listo para usarse.</p>
+                    <img class="info__image" src="images/éxito archivos.png" alt="Éxito archivos">
+                </section>
+            </section>
+
+
+
+            <!-- Componentes Principales -->
+            <section>
+                <h2 class="section__title">Componentes</h2>
+
+                <!-- GRID SYSTEM -->
+                <section>
+                    <h2 class="section--title">Grid System (Sistema de rejilla)</h2>
+
+                    <div class="code-container">
+                        <div class="code-display">
+                            <div class="row">
+                                <div class="col s12 card-panel teal lighten-2 text-sm">
+                                    Este div tiene 12 columnas de ancho en todos los tamaños de pantalla.
+                                </div>
+                                <div class="col s6 card-panel teal lighten-2 text-sm">6 columnas (mitad)</div>
+                                <div class="col s6 card-panel teal lighten-2 text-sm">6 columnas (mitad)</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="section--title">Grid System (Sistema de rejilla)</h2>
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/Sebastian-NM/ff411d527dcb59d4cdf5bb4a3ae76d28.js"></script>
+                </section>
+
+                <!-- BOTÓN-->
+                <section>
+                    <h2 class="section--title">Botón</h2>
+                        
+                    <div class="button-container code-display">
+                        <a class="waves-effect waves-light btn">Estos</a>
+                        <a class="waves-effect waves-light btn">Son</a>
+                        <a class="waves-effect waves-light btn">Botones</a>
+                    </div>
+
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/Sebastian-NM/308075e2682fec6b2b1c8262dfb25ebe.js"></script>
+                </section>
+
+                <!-- NAV BAR -->
+                <section>
+                    <h2 class="section--title">Barra de navegación</h2>
+
+                    <nav>
+                        <div class="nav-wrapper">
+                            <a href="javascript:alert('¿Quién te dio permiso para hacer clic?');"
+                                class="brand-logo">Logo</a>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <li><a href="javascript:alert('¿Quién te dio permiso para hacer clic?');">Inicio</a></li>
+                                <li><a href="javascript:alert('¿Quién te dio permiso para hacer clic?');">Sobre mi</a></li>
+                                <li><a href="javascript:alert('¿Quién te dio permiso para hacer clic?');">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/Sebastian-NM/b7482d817b113c534ece063454f4a856.js"></script>
+                </section>
+
+
+                <!-- INPUT -->
+                <section>
+                    <h2 class="section--title">Input</h2>
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/Sebastian-NM/119bcdb657acd6387f46664a29586b12.js"></script>
+                </section>
+
+
+                <!-- COLECCIÓN -->
+                <section>
+                    <h2 class="section--title">Collection</h2>
+                        
+                    <ul class="collection">
+                        <li class="collection-item"><span class="badge">Hoy</span> Comprar víveres</li>
+                        <li class="collection-item"><span class="badge">Mañana</span> Revisar correos importantes</li>
+                        <li class="collection-item"><span class="badge">Próxima semana</span> Asistir a reunión de equipo</li>
+                        <li class="collection-item"><span class="badge">Pendiente</span> Terminar informe mensual</li>
+                    </ul>
+
+
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/Sebastian-NM/744fb653aafafa44bee97fc6afb0fc80.js"></script>
+                </section>
+
+
+                <!-- TARJETAS -->
+                <section>
+                    <h2 class="section--title">Tarjeta</h2>
+
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Título</span>
+                                    <p>Soy una tarjeta muy simple. Se me da bien contener pequeños fragmentos de información. 
+                                        Soy práctica porque necesito poco marcado para usarla eficazmente.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="javascript:alert('¿Quién te dio permiso para hacer clic?');">Enlace 1</a>
+                                    <a href="javascript:alert('¿Quién te dio permiso para hacer clic?');">Enlace 2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section--title">Tarjeta</h2>
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/amandachs/5e92655298e9841d77e5a0537722a215.js"></script>
+                </section>
+
+
+                <!-- ÍCONOS -->
+                <section>
+                    <h2 class="section--title">Íconos</h2>
+                        
+                    <div class="icon-container">
+                        <i class="small material-icons">add</i>
+                        <i class="medium material-icons">home</i>
+                        <i class="tiny material-icons">favorite</i>
+                        <i class="large material-icons">search</i>
+                        <i class="small material-icons">settings</i> 
+                    </div>
+
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/amandachs/cceeffeaf46c7ae8948ede57f17343c9.js"></script>
+                </section>
+
+
+                <!-- PRELOADER -->
+                <section>
+                    <div class="div--codigo">
+                        <h2 class="section--title">Preloader</h2>
+
+                        <div class="preloader-wrapper big active">
+                            <div class="spinner-layer", style= "border-color: #d45f86;">
+                                <div class="circle-clipper left">
+                                <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Código de Gist incrustado -->
+                        <script src="https://gist.github.com/amandachs/3bca3a831b66e226ca2c1b4d2dcbee92.js"></script>
+                </section>
+
+
+                <!-- FOOTER -->
+                <section>
+                    <h2 class="section--title">Footer</h2>
+                    
+                    <footer class="page-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col l6 s12">
+                                    <h5 class="white-text">Contenido</h5>
+                                    <p class="grey-text text-lighten-4">Se pueden utilizar filas y columnas para organizar la información.</p>
+                                </div>
+                                <div class="col l4 offset-l2 s12">
+                                    <h5 class="white-text">Enlaces</h5>
+                                    <ul>
+                                        <li><a class="grey-text text-lighten-3" href="javascript:alert('¿Quién te dio permiso para hacer clic?')">Enlace 1</a></li>
+                                        <li><a class="grey-text text-lighten-3" href="javascript:alert('¿Quién te dio permiso para hacer clic?')">Enlace 2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-copyright">
+                            <div class="container">
+                                <span>© 2025 Copyright</span>
+                                <a class="grey-text text-lighten-4 right" href="javascript:alert('¿Quién te dio permiso para hacer clic?')">More Links</a>
+                            </div>
+                        </div>
+                    </footer>
+
+                </section>
+                
+                <section>
+                    <br>
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/amandachs/2e70ed4562855533f4b8d53f120a5838.js"></script>
+                </section>
+
+
+                <!-- BREADCRUMBS -->
+                <section>
+                        <h2 class="section--title">Breadcrumbs</h2>
+
+                        <nav>
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="breadcrumb">Primero</a>
+                                    <a href="#!" class="breadcrumb">Segundo</a>
+                                    <a href="#!" class="breadcrumb">Tercero</a>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <!-- Código de Gist incrustado -->
+                        <script src="https://gist.github.com/amandachs/543262f0100e277d6b7392a4aa37a8f9.js"></script>
+                </section>
+
+
+                <!-- MODAL -->
+                <section>
+
+                        <h2 class="section--title">Modal</h2>
+
+                        <!-- Botón para abrir el modal -->
+                        <a class="waves-effect waves-light btn modal-trigger" data-target="modal1">Abrir Modal</a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <h4>Encabezado del Modal</h4>
+                                <p>Este es el contenido de un modal dentro de una diapositiva de Reveal.js.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var elems = document.querySelectorAll('.modal');
+                                M.Modal.init(elems);
+                            });
+                        </script>
+
+                        <script src="https://gist.github.com/amandachs/1ab3cfa4615b5f67cbcea68f15ab8e37.js"></script>
+
+                </section>
+
+                <!-- TAG -->
+                <section>
+                    <div class="div--codigo">
+                        <h2 class="section--title">Tag</h2>
+
+                        <div class="chip">
+                            Tag
+                            <i class="close material-icons">close</i>
+                        </div>
+
+                        <!-- Código de Gist incrustado -->
+                        <script src="https://gist.github.com/amandachs/7ee6d32d6949ea789304b5753e970fb5.js"></script>
+                </section>
+                    
+
+                <!-- RADIO BUTTONS -->
+                <section>
+                        <h2 class="section--title">Radio buttons</h2>
+
+                        <form class="radio-form" action="#">
+                            <p>
+                              <label>
+                                <input name="group1" type="radio" checked />
+                                <span>Opción A</span>
+                              </label>
+                            </p>
+                            <p>
+                              <label>
+                                <input name="group1" type="radio" />
+                                <span>Opción B</span>
+                              </label>
+                            </p>
+                          </form>
+
+                        <!-- Código de Gist incrustado -->
+                        <script src="https://gist.github.com/amandachs/3f17d1102b5c070564ada975577c0992.js"></script>
+                </section>
+
+                <!-- Checkboxes -->
+                <section>
+                    <h2 class="section--title">Checkboxes</h2>
+
+                    <form class="checkboxes-form" action="#">
+                        <p>
+                          <label>
+                            <input type="checkbox" />
+                            <span>Tarea A</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input type="checkbox" checked="checked" />
+                            <span>Tarea B</span>
+                          </label>
+                        </p>
+                    </form>
+
+                    <!-- Código de Gist incrustado -->
+                    <script src="https://gist.github.com/amandachs/141cc6c8739b1512fb29f8b29cfd6882.js"></script>
+                </section>
+
+
+            </section>    
+            
+            <!-- Diapositiva de Ventajas y Desventajas -->
+            <section>
+                <h2 class="section__title">Ventajas y desventajas</h2>
+
+                <section>
+                    <table class="comparative-table">
+                        <thead>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th class="ventaja">Ventajas</th>
+                                <th class="desventaja">Desventajas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Facilidad de uso</td>
+                                <td>Materialize cuenta con una sintaxis intuitiva y sencilla, 
+                                    muy similar a otros frameworks CSS. Esto facilita la adopción por parte de principiantes, 
+                                    y su documentación accesible acelera el aprendizaje.</td>
+                                <td>A pesar de su simplicidad, la curva de aprendizaje puede ser 
+                                    algo empinada al principio, especialmente si no se tiene experiencia con los principios 
+                                    de Material Design.</td>
+                            </tr>
+                            <tr>
+                                <td>Flexibilidad</td>
+                                <td>Materialize ofrece una gran flexibilidad mediante sus componentes pre-diseñados, 
+                                    lo que facilita la creación de diseños responsivos de manera rápida.</td>
+                                <td>Aunque flexible, algunos desarrolladores pueden encontrar que la personalización es 
+                                    limitada sin modificar el código base, lo que restringe ciertos aspectos avanzados de 
+                                    diseño. Comparado con otras bibliotecas como Bootstrap, es menos personalizable.</td>
+                            </tr>
+                            <tr>
+                                <td>Diseño</td>
+                                <td>Basado en Material Design de Google, Materialize ofrece una apariencia moderna y limpia, 
+                                    mejorando la experiencia de usuario con una estética intuitiva y consistente, similar 
+                                    a las interfaces más utilizadas en la web.</td>
+                                <td>El diseño de Materialize, aunque atractivo, puede no ser adecuado para proyectos que 
+                                    requieren un diseño altamente personalizado o que se apartan de las 
+                                    tendencias visuales actuales.</td>
+                            </tr>
+                            <tr>
+                                <td>Rendimiento</td>
+                                <td>Materialize está optimizado para ofrecer un rendimiento sólido, proporcionando una interfaz 
+                                    fluida y adaptable que funciona bien en diferentes dispositivos y plataformas.</td>
+                                <td>En algunos casos, la cantidad de recursos que ofrece Materialize puede hacer que se vuelva 
+                                    pesado, afectando la velocidad de carga en dispositivos con conexiones lentas o 
+                                    de menor rendimiento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            
+                <section>
+                    <table class="comparative-table">
+                        <thead>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th class="ventaja">Ventajas</th>
+                                <th class="desventaja">Desventajas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Apoyo de la comunidad</td>
+                                <td>Materialize cuenta con una comunidad activa y una extensa documentación, lo que 
+                                    facilita la resolución de problemas. Al ser un framework bien consolidado, 
+                                    existen numerosos tutoriales y foros de discusión disponibles.</td>
+                                <td>Comparado con otros frameworks como Bootstrap o TailwindCSS, la comunidad de Materialize 
+                                    es algo más pequeña, lo que puede dificultar la búsqueda de soluciones a problemas específicos.</td>
+                            </tr> 
+                            <tr>
+                                <td>Compatibilidad</td>
+                                <td>Materialize es compatible con la mayoría de los navegadores modernos, 
+                                    garantizando una experiencia de usuario estable y fluida.</td>
+                                <td>Algunas características pueden no ser compatibles con versiones antiguas de navegadores, 
+                                    lo que puede limitar su accesibilidad en entornos con tecnologías desactualizadas.</td>
+                            </tr>
+                            <tr>
+                                <td>Integración con JavaScript</td>
+                                <td>Materialize incluye componentes interactivos como modales, sliders y dropdowns, 
+                                    facilitando la creación de interfaces dinámicas sin necesidad de mucho código adicional.</td>
+                                <td>Aunque es flexible, depende de jQuery para algunas funcionalidades, lo que puede 
+                                    ser un inconveniente para proyectos que prefieren evitar el uso de jQuery debido a sus 
+                                    dependencias adicionales.</td>
+                            </tr>
+                            <tr>
+                                <td>Uso en proyectos</td>
+                                <td>Ideal para proyectos pequeños o prototipos rápidos gracias a su diseño atractivo 
+                                    y su facilidad de implementación.</td>
+                                <td>En proyectos más grandes, Materialize puede resultar limitado en comparación con otras 
+                                    soluciones más flexibles, que permiten una mayor personalización.</td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </section>
+
+            </section>
+        
+        </div>
+    </div>
+
+
+    <!-- Inclusión de librerías externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar el slider de Materialize
+            var sliders = document.querySelectorAll('.slider');
+            M.Slider.init(sliders, {
+                indicators: true,
+                height: 400,
+                duration: 500,
+                interval: 3000
+            });
+
+            // Inicializar Reveal.js para la presentación
+            Reveal.initialize();
+        });
+    </script>
+
+    <!-- JavaScript de Reveal.js para las diapositivas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+    
+</body>
+</html>
