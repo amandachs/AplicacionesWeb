@@ -118,16 +118,15 @@ section h1.section__title {
 }
 
 h2.section--title {
-    font-size: 60px; /* Ajusta el tamaño de fuente como lo necesites */
+    font-size: 60px;
 }
 
 /* ----------------- /
 /    COLLECTION      /
 / ----------------- */
 
-/* Cambiar el tamaño de fuente de la colección */
 .collection {
-    font-size: 16px; /* Ajusta el tamaño de la fuente según lo necesites */
+    font-size: 16px;
 }
 
 /* ------------------ /
@@ -170,22 +169,21 @@ h2.section--title {
     margin: 0 10px;
 }
 
-
 /* ------------ /
 /    FOOTER    /
 / ----------- */
 
 /* Ajuste del tamaño de fuente en el footer */
 .page-footer .container {
-    font-size: 16px; /* Tamaño general del texto */
+    font-size: 16px;
 }
 
 .page-footer h5 {
-    font-size: 22px; /* Tamaño de los títulos dentro del footer */
+    font-size: 22px;
 }
 
 .page-footer p, .page-footer a {
-    font-size: 14px; /* Tamaño del texto en párrafos y enlaces */
+    font-size: 14px;
 }
 
 /* Alineación del contenido a la izquierda */
@@ -199,47 +197,22 @@ h2.section--title {
 }
 
 .page-footer .footer-copyright span {
-    font-size: 14px; /* Ajustar el tamaño de la copyright */
+    font-size: 14px;
 }
 
 .page-footer .footer-copyright a {
-    font-size: 14px; /* Ajustar el tamaño del enlace 'More Links' */
+    font-size: 14px;
     text-align: left;
 }
 
-
 /* ---------------- /
-/    BREADCRUMBS    /
+/     CHECKBOX      /
 / --------------- */
-
-.nav-wrapper .col.s12 {
-    text-align: left;
-}
-
-.nav-wrapper .breadcrumb {
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-
-
-/* ---------------- /
-/   RADIO BUTTONS   /
-/ --------------- */
-.radio-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
 .checkboxes-form{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 
 /* ---------------- /
 /     TABLA        /
