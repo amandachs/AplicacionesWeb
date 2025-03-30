@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora virtual</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
+
 <body>
     <header id="firstHeader">
+        <i class="bi bi-telephone-fill"></i>
         <p>+506 8888 7777</p> 
     </header>
     <header id="secondHeader">
         <p>Calculadora virtual</p>
     </header>
+
     <main>
-        <div id="contenedor">
-            <div id="datos">
-                <p>0</p>
+        <img src="background.png" class="background">
+        <div id="container">
+            <div id="input-container">
+                <input type="text" id="display" readonly>
             </div>
-            <div id="botones">
-                <div class="boton">
-                    <p>C</p>
-                </div>
-                <div class="boton">
-                    <p>C</p>
-                </div>
-                <div class="boton">
-                    <p>C</p>
-                </div>
-                <div class="boton">
-                    <p>C</p>
-                </div>
-                <div class="boton">
-                    <p>C</p>
-                </div>
-                <div class="boton">
-                    <p>C</p>
-                </div>
+            <div class="grid">
+                <button class="orange" onclick="limpiar()">C</button>
+                <button class="orange" onclick="borrar()"><i class="bi bi-backspace-fill"></i></button>
+                <button class="orange" onclick="agregar('%')">%</button>
+                <button class="orange" onclick="agregar('/')">/</button>
+
+                <button onclick="agregar('7')">7</button>
+                <button onclick="agregar('8')">8</button>
+                <button onclick="agregar('9')">9</button>
+                <button class="orange" onclick="agregar('x')">x</button>
+
+                <button onclick="agregar('4')">4</button>
+                <button onclick="agregar('5')">5</button>
+                <button onclick="agregar('6')">6</button>
+                <button class="orange" onclick="agregar('-')">-</button>
+
+                <button onclick="agregar('1')">1</button>
+                <button onclick="agregar('2')">2</button>
+                <button onclick="agregar('3')">3</button>
+                <button class="orange" onclick="agregar('+')">+</button>
+
+                <button class="orange" onclick="agregar('+/-')">+/-</button>
+                <button onclick="agregar('0')">0</button>
+                <button class="orange" onclick="agregar('.')">.</button>
+                <button class="orange" onclick="agregar('=')">=</button>
             </div>
         </div>
     </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
