@@ -1,0 +1,43 @@
+/* Fondo main */
+main {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor negro*/
+#contenedor-negro {
+  background-color: black;
+  padding: 15px;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor blanco */
+#contenedor-blanco {
+  background-color: #FFF;
+  border-radius: 40px;
+  padding: 15px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cajas amarillas */
+.caja-amarilla {
+  background-color: rgb(241, 210, 34);
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

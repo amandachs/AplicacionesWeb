@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Roboto;
+    background: #F0EFE9;
+    margin: 0;
+}
+
+header {
+    background: #50E3A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+    color: #FFF;
+}
+
+header > div {
+    display: flex;
+    max-width: 768px;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+header > div span#taskCounter {
+    font-size: 1.5em;
+}
+
+header > div div#tasksDate {
+    font-size: 1.5em;
+    text-align: right;
+}
+
+header > div div#tasksDate span{
+    font-weight: light;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+main > section {
+    background: #FFF;
+    max-width: 768px;
+    padding: 20px 0px; /* El primero es de arriba y abajo, el segundo de derecha e izquierda */
+    width: 100%;
+    border-radius: 20px;
+}
+
+main > section .task {
+    border-bottom: 1px solid #CECECE;
+    padding: 10px 10px;
+}
+
+main > section .task:first-of-type {
+    border-top: 1px solid #CECECE;
+}
+
+main > section .task input[type="checkbox"]{
+    margin: 0px 20px;
+}

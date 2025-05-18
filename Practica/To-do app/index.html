@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> <!-- Se encuentra todo el contenido visible -->
+    <header> <!-- Parte de arriba -->
+        <div>
+            <span id="taskCounter"> <b>6</b> Tasks</span> <!-- No fuerza un salto de línea y se usa dentro de otras etiquetas de texto -->
+            <div id="tasksDate"> <!-- Fecha -->
+                <b>Jueves</b> 27, <br><span>Febrero</span>
+            </div>
+        </div>
+    </header>
+
+    <main> <!-- Debajo del header, es el contenido -->
+
+        <section> <!-- Donde van a estar las tareas -->
+            <div class="task"> <!-- Cada tarea va en un div -->
+                <input name="task1" id="task1" type="checkbox">
+                <laber for="task1">Tarea número 1</laber>
+            </div>
+            <div class="task">
+                <input name="task2" id="task2" type="checkbox">
+                <laber for="task2">Tarea número 2</laber>
+            </div>
+            <div class="task">
+                <input name="task3" id="task3" type="checkbox">
+                <laber for="task3">Tarea número 3</laber>
+            </div>
+            <div class="task">
+                <input name="task4" id="task4" type="checkbox">
+                <laber for="task4">Tarea número 4</laber>
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+</html>
