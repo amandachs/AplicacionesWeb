@@ -17,7 +17,7 @@ Los estilos en línea en React se aplican directamente a los elementos HTML dent
 
 ### Perspectiva personal: 
 Usar estilos en línea me ha resultado muy útil al inicio. Me ayuda a concentrarme en una sola parte del código sin tener que cambiar entre archivos. Sin embargo, ya me di cuenta de que no es práctico a largo plazo, sobre todo si quiero que mi aplicación tenga buen diseño, responda al tamaño de la pantalla o tenga interacciones (como animaciones o hover). Por eso, aunque está bien para practicar y hacer pruebas, preferiría usar otras estrategias.
-___
+
 
 ## 2. Hojas de estilo CSS tradicionales
 ### Descripción: 
@@ -34,7 +34,7 @@ Esta estrategia consiste en escribir los estilos en un archivo .css por separado
 
 ### Perspectiva personal: 
 Como estoy empezando en React y ya tenía algo de experiencia previa con HTML y CSS, usar hojas de estilo tradicionales me resultó muy cómodo al principio. Sin embargo, ahora que estoy entendiendo mejor cómo funciona React y sus componentes, me doy cuenta de que los estilos tradicionales pueden hacer que el código se vuelva desordenado si no tengo cuidado. Por eso, aunque me parece buena opción para proyectos pequeños o para aprender, probablemente en proyectos más grandes usaría otra técnica más moderna para evitar conflictos y organizar mejor el código.
-___
+
 
 ## 3. CSS Modules
 ### Descripción: 
@@ -55,7 +55,7 @@ Esto se logra agregando la extensión .module.css al archivo CSS, y luego import
 ### Perspectiva personal:
 Aunque todavía me cuesta un poco entender bien cómo funciona eso de importar los estilos como objetos en JavaScript, me parece una opción muy ordenada y segura. Me gusta que los estilos estén bien organizados y que no haya riesgo de romper otros componentes sin querer.
 Cuando tenga más experiencia o esté trabajando en un proyecto más grande (o con más personas), sí me gustaría usar CSS Modules para evitar errores y mantener todo limpio.
-___
+
 
 ## 4. CSS-in-JS (Styled Components)
 ### Descripción:
@@ -77,7 +77,7 @@ Con Styled Components, creas componentes React que ya incluyen sus estilos, todo
 ### Perspectiva personal:
 Me llama mucho la atención esta forma porque tiene un diseño muy moderno y práctico: puedo tener toda la información del componente en un solo archivo y hacer estilos dinámicos usando props, lo que parece muy poderoso.
 Sin embargo, para mí ha sido un poco complicado porque a veces daba errores y no entendía por qué. Siento que necesito entender mejor React y JavaScript para sacarle todo el provecho.
-___
+
 
 ## 5. Preprocesadores CSS (SASS/SCSS)
 ### Descripción:
@@ -103,7 +103,7 @@ Estas características ayudan a escribir estilos más organizados, fáciles de m
 Creo que SASS/SCSS es muy útil para proyectos complejos porque permite tener los estilos bien organizados y fácilmente reutilizables, algo que no es tan fácil con CSS tradicional o estilos en línea.
 Además, lo que me gusta de esta opción y que la diferencia de las demás es que, aunque no es dinámica en tiempo real como CSS-in-JS, ayuda a mantener el código limpio y escalable, lo cual es fundamental cuando se trabaja en equipos grandes o proyectos que crecen mucho.
 Por ahora, como todavía estoy aprendiendo, me siento más cómoda con métodos más simples, pero sé que aprender SASS me abrirá la puerta para trabajar en proyectos profesionales más grandes y con mejores prácticas.
-___
+
 
 ## Referencias bibliográficas
 - Gastwiri, V. (abril, 2023). Cómo dar estilo a tus aplicaciones React con CSS como un profesional. https://www.freecodecamp.org/espanol/news/como-dar-estilo-a-tus-aplicaciones-react-con-css-como-un-profesional/
