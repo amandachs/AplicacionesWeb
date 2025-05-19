@@ -81,12 +81,11 @@ Sin embargo, para mí ha sido un poco complicado porque a veces daba errores y n
 
 ## 5. Preprocesadores CSS (SASS/SCSS)
 ### Descripción:
-SASS (Syntactically Awesome Style Sheets) y su versión más popular SCSS son extensiones del CSS que permiten agregar funcionalidades que el CSS tradicional no tiene, como:
+SASS (Syntactically Awesome Style Sheets) y su versión más popular SCSS son extensiones del CSS que permiten agregar funcionalidades que el CSS tradicional no tiene. Estas características ayudan a escribir estilos más organizados, fáciles de mantener y reutilizables, especialmente en proyectos grandes.
 - Variables: para almacenar colores, tamaños o cualquier valor y reutilizarlos fácilmente.
 - Anidamiento: escribir selectores dentro de otros para que el código sea más limpio y organizado.
 - Mixins: bloques de estilos reutilizables que puedes insertar en cualquier lugar.
 - Funciones y operaciones: para hacer cálculos o manipular valores.
-Estas características ayudan a escribir estilos más organizados, fáciles de mantener y reutilizables, especialmente en proyectos grandes.
 
 ### Ventajas:
 - Gracias al anidamiento y variables, el código es más limpio y fácil de leer.
